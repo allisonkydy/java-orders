@@ -46,7 +46,7 @@ public class CustomerServiceImpl implements CustomerService
 
     for (Order o : customer.getOrders())
     {
-      newCustomer.getOrders().add(new Order(o.getOrdamount(), o.getAdvanceamount(), o.getOrddescription(), newCustomer));
+      newCustomer.getOrders().add(new Order(o.getOrdamount(), o.getAdvanceamount(), newCustomer, o.getOrddescription()));
     }
 
     return custrepos.save(newCustomer);
